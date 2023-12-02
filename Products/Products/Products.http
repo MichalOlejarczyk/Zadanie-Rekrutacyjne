@@ -1,0 +1,76 @@
+@Products_HostAddress = http://localhost:5008
+
+GET {{Products_HostAddress}}/products/
+Accept: application/json
+
+
+###
+GET {{Products_HostAddress}}/products/{id}
+Accept: application/json
+
+
+###
+DELETE {{Products_HostAddress}}/products/{id}
+Accept: application/json
+
+
+###
+POST {{Products_HostAddress}}/products/{id}
+Accept: application/json
+
+{
+    "id": "2023-05-10",
+    "name": "",
+    "cost": 0 , 
+    "in_stock": 0 ,
+    "description": ""
+}
+
+###
+PATCH {{Products_HostAddress}}/products/{id}
+Accept: application/json
+
+{
+    "id": "2023-05-10",
+    "name": "",
+    "cost": 0 , 
+    "in_stock": 0 ,
+    "description": ""
+}
+
+###
+GET {{Products_HostAddress}}/products/{id}/negotiations
+Accept: application/json
+
+
+###
+GET {{Products_HostAddress}}/products/{id}/negotiations/{negoId}
+Accept: application/json
+
+
+###
+POST {{Products_HostAddress}}/products/{id}/negotiations/{negoId}
+Accept: application/json
+
+{
+    "id": "2023-05-10",
+    "product_id": "",
+    "status": "" , 
+    "customer_id": "" ,
+    "new_cost": 0
+}
+
+###
+PATCH {{Products_HostAddress}}/products/{id}/negotiations/{negoId}
+Accept: application/json
+
+{
+    "id": "2023-05-10",
+    "product_id": "",
+    "status": "" , 
+    "customer_id": "" ,
+    "new_cost": 0
+}
+
+###
+
