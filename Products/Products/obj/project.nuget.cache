@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b8AE5lTtcSEmOncgRXcCfuAEpjEpK8Rgdcck9tPZehnzlopAFY67pcT2Ce4T4xKw+zmZtWAKztUEp1uK2pw63g==",
+  "dgSpecHash": "nuUJj1gH0GjlA3S4K5oP01pL4FG1BXA9kb8jdkfO0krWYpctRcTDeXPMnnN5+dNZW6FlCYze/LGjbwOKTw55wg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michał\\source\\repos\\Products\\Products\\Products.csproj",
+  "projectFilePath": "C:\\Users\\Michał\\Documents\\GitHub\\Zadanie-Rekrutacyjne\\Products\\Products\\Products.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michał\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Michał\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

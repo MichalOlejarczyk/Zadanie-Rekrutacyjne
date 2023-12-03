@@ -1,5 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using Products.Models;
+using Products.Models.Entities;
+using Products.Repository;
 
 namespace Products.Controllers
 {
@@ -8,24 +11,54 @@ namespace Products.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly ILogger<ProductsController> _logger;
+        private readonly IRepository<ProductEntity> _productRepository;
 
-        public ProductsController(ILogger<ProductsController> logger)
+        public ProductsController(ILogger<ProductsController> logger, IRepository<ProductEntity> productRepository)
         {
             _logger = logger;
+            _productRepository = productRepository;
         }
 
         [HttpGet(Name = "GetProducts")]
         public IEnumerable<Product> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new Product
+            return _productRepository.GetAll().Select(pEnt => new Product 
             {
-                Id = Guid.NewGuid(),
-                Name = index.ToString(),
-                Cost = index,
-                InStock = index,
+                Id= pEnt.Id, 
+                Name=pEnt.Name, 
+                Cost=pEnt.Cost, 
+                Description=pEnt.Description, 
+                InStock=pEnt.InStock
+            });
+        }
 
-            })
-            .ToArray();
+        [HttpPost("{id}")]
+        public IActionResult Post(Guid id, [FromBody] Product value)
+        {
+            if (value == null) return BadRequest("Invalid Product");
+            var result = _productRepository.Add(new ProductEntity
+            {
+                Id = value.Id,
+                Name = value.Name,
+                Cost = value.Cost,
+                Description = value.Description,
+                InStock = value.InStock
+            });
+            return result ? Created() : Conflict();
+        }
+       
+        [HttpGet("{id}")]      
+        public Product Get(Guid id)
+        {   
+            var pEnt = _productRepository.GetById(id);
+            return new Product
+            {
+                Id = pEnt.Id,
+                Name = pEnt.Name,
+                Cost = pEnt.Cost,
+                Description = pEnt.Description,
+                InStock = pEnt.InStock
+            };
         }
     }
 }

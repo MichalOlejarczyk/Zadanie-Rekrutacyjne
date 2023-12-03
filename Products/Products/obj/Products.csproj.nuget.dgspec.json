@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michał\\source\\repos\\Products\\Products\\Products.csproj": {}
+    "C:\\Users\\Michał\\Documents\\GitHub\\Zadanie-Rekrutacyjne\\Products\\Products\\Products.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michał\\source\\repos\\Products\\Products\\Products.csproj": {
+    "C:\\Users\\Michał\\Documents\\GitHub\\Zadanie-Rekrutacyjne\\Products\\Products\\Products.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michał\\source\\repos\\Products\\Products\\Products.csproj",
+        "projectUniqueName": "C:\\Users\\Michał\\Documents\\GitHub\\Zadanie-Rekrutacyjne\\Products\\Products\\Products.csproj",
         "projectName": "Products",
-        "projectPath": "C:\\Users\\Michał\\source\\repos\\Products\\Products\\Products.csproj",
+        "projectPath": "C:\\Users\\Michał\\Documents\\GitHub\\Zadanie-Rekrutacyjne\\Products\\Products\\Products.csproj",
         "packagesPath": "C:\\Users\\Michał\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michał\\source\\repos\\Products\\Products\\obj\\",
+        "outputPath": "C:\\Users\\Michał\\Documents\\GitHub\\Zadanie-Rekrutacyjne\\Products\\Products\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

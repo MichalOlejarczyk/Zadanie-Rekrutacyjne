@@ -5,7 +5,7 @@ Accept: application/json
 
 
 ###
-GET {{Products_HostAddress}}/products/{id}
+GET {{Products_HostAddress}}/products/ce30e164-dde2-44e9-b639-4a8c4c6176c0
 Accept: application/json
 
 
@@ -15,11 +15,12 @@ Accept: application/json
 
 
 ###
-POST {{Products_HostAddress}}/products/{id}
+POST {{Products_HostAddress}}/products/ce30e164-dde2-44e9-b639-4a8c4c6176c0
 Accept: application/json
+Content-Type: application/json
 
 {
-    "id": "2023-05-10",
+    "id": "ce30e164-dde2-44e9-b639-4a8c4c6176c0",
     "name": "",
     "cost": 0 , 
     "in_stock": 0 ,
