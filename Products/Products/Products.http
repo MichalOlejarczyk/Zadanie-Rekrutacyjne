@@ -15,9 +15,21 @@ Accept: application/json
 
 
 ###
-POST {{Products_HostAddress}}/products/ce30e164-dde2-44e9-b639-4a8c4c6176c0
+POST {{Products_HostAddress}}/products
 Accept: application/json
 Content-Type: application/json
+
+{
+    "id": "ce30e164-dde2-44e9-b639-4a8c4c6176c0",
+    "name": "",
+    "cost": 100 , 
+    "in_stock": 0 ,
+    "description": ""
+}
+
+###
+PUT {{Products_HostAddress}}/products/{id}
+Accept: application/json
 
 {
     "id": "ce30e164-dde2-44e9-b639-4a8c4c6176c0",
@@ -28,49 +40,38 @@ Content-Type: application/json
 }
 
 ###
-PATCH {{Products_HostAddress}}/products/{id}
+GET {{Products_HostAddress}}/products/ce30e164-dde2-44e9-b639-4a8c4c6176c0/negotiations
 Accept: application/json
 
+
+###
+GET {{Products_HostAddress}}/products/ce30e164-dde2-44e9-b639-4a8c4c6176c0/negotiations/de30e164-dde2-44e9-b639-4a8c4c6176c0
+Accept: application/json
+
+
+###
+POST {{Products_HostAddress}}/products/ce30e164-dde2-44e9-b639-4a8c4c6176c0/negotiations
+Accept: application/json
+Content-Type: application/json
+
 {
-    "id": "2023-05-10",
-    "name": "",
-    "cost": 0 , 
-    "in_stock": 0 ,
-    "description": ""
+    "id": "de30e164-dde2-44e9-b639-4a8c4c6176c0",
+    "productId": "ce30e164-dde2-44e9-b639-4a8c4c6176c0", 
+    "customerId": "fe30e164-dde2-44e9-b639-4a8c4c6176c0" ,
+    "newCost": 30
 }
 
 ###
-GET {{Products_HostAddress}}/products/{id}/negotiations
+PUT {{Products_HostAddress}}/products/ce30e164-dde2-44e9-b639-4a8c4c6176c0/negotiations/de30e164-dde2-44e9-b639-4a8c4c6176c0
 Accept: application/json
-
-
-###
-GET {{Products_HostAddress}}/products/{id}/negotiations/{negoId}
-Accept: application/json
-
-
-###
-POST {{Products_HostAddress}}/products/{id}/negotiations/{negoId}
-Accept: application/json
+Content-Type: application/json
 
 {
-    "id": "2023-05-10",
-    "product_id": "",
-    "status": "" , 
-    "customer_id": "" ,
-    "new_cost": 0
-}
-
-###
-PATCH {{Products_HostAddress}}/products/{id}/negotiations/{negoId}
-Accept: application/json
-
-{
-    "id": "2023-05-10",
-    "product_id": "",
-    "status": "" , 
-    "customer_id": "" ,
-    "new_cost": 0
+    "id": "de30e164-dde2-44e9-b639-4a8c4c6176c0",
+    "productId": "ce30e164-dde2-44e9-b639-4a8c4c6176c0",
+    "status": "Rejected" , 
+    "customerId": "fe30e164-dde2-44e9-b639-4a8c4c6176c0" ,
+    "newCost": 30
 }
 
 ###

@@ -4,7 +4,7 @@
         where T : Entity
     {
         bool Add(T entity);
-        T GetById(Guid id);
+        T? GetById(Guid id);
         bool Update(T entity);
 
         IEnumerable<T> GetAll(); 

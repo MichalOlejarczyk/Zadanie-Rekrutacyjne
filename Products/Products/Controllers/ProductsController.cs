@@ -32,8 +32,8 @@ namespace Products.Controllers
             });
         }
 
-        [HttpPost("{id}")]
-        public IActionResult Post(Guid id, [FromBody] Product value)
+        [HttpPost()]
+        public IActionResult Post([FromBody] Product value)
         {
             if (value == null) return BadRequest("Invalid Product");
             var result = _productRepository.Add(new ProductEntity
@@ -48,9 +48,10 @@ namespace Products.Controllers
         }
        
         [HttpGet("{id}")]      
-        public Product Get(Guid id)
+        public ActionResult<Product> Get(Guid id)
         {   
             var pEnt = _productRepository.GetById(id);
+            if (pEnt == null) return NotFound();
             return new Product
             {
                 Id = pEnt.Id,

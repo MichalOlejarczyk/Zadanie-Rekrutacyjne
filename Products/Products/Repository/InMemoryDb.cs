@@ -24,9 +24,11 @@ namespace Products.Repository
             return _db.Values;
         }
 
-        public T GetById(Guid id)
+        public T? GetById(Guid id)
         {
-            return _db[id];
+            if (!_db.ContainsKey(id))
+                return null;
+                return _db[id];
         }
 
         public bool Update(T entity)
@@ -34,7 +36,7 @@ namespace Products.Repository
             if (entity == null || !_db.ContainsKey(entity.Id))
                 return false;
             _db[entity.Id] = entity;
-            return true;
+                return true;
         }
     }
 }
